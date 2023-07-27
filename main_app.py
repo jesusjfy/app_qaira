@@ -31,4 +31,4 @@ col2.metric("Presión", str("{:.2f}".format(df['Presion'].mean()) + " Pa"), str(
 col3.metric("Humedad", str("{:.2f}".format(df['Humedad'].mean()) + " %"), str("{:.2f}".format(100.00 - df['Humedad'].mean()) + " %"))
 
 st.markdown('### Gráfico de línea')
-st.line_chart(df, x = 'Fecha_datetime', y = parametros_linea, height = 500)
+st.line_chart(df, x = 'Fecha', y = parametros_linea, height = 500)
