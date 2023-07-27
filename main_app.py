@@ -11,10 +11,10 @@ df.columns = ['Id','Codigo_entidad','Codigo_ubigeo','Codigo_pais','Nombre_uo','F
 df['Fecha'] = pd.to_datetime(df['Fecha'], dayfirst=True)
 df = df.sort_values('Fecha')
 
-df['Dia'] = df['Fecha_datetime'].dt.day
-df['Mes'] = df['Fecha_datetime'].dt.month
-df['Anio'] = df['Fecha_datetime'].dt.year
-df['Tiempo'] = df['Fecha_datetime'].dt.time
+df['Dia'] = df['Fecha'].dt.day
+df['Mes'] = df['Fecha'].dt.month
+df['Anio'] = df['Fecha'].dt.year
+df['Tiempo'] = df['Fecha'].dt.time
 
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
